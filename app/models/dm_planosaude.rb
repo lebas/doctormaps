@@ -1,4 +1,4 @@
 class DmPlanosaude < ActiveRecord::Base
-	validates :nome, :presence => true
+	validates :nome, :key => "value", presence => true
 	#tipo
 end

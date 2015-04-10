@@ -18,7 +18,7 @@ class DmClinica < ActiveRecord::Base
   
   validates_length_of :cep, :is => 10, :message => 'O tamanho do campo CEP está incorreto'
   validates_length_of :estado, :is => 2, :message => 'O tamanho do campo Estado está incorreto'
-  validates_length_of :telefone, :minumium => 14, :maximium => 15, :message => 'O tamanho do campo Telefone está incorreto'
+  validates_length_of :telefone, :minimum => 14, :maximum => 15, :message => 'O tamanho do campo Telefone está incorreto'
 
   before_save :get_geo
 
