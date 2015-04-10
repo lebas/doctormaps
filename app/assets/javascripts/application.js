@@ -14,6 +14,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require gmaps/google
-//= require underscore
+//= require underscore-min
 //= require gmaps_google
 
