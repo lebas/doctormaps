@@ -1,16 +1,16 @@
 class DmMedico < ActiveRecord::Base
   ESTADOS_BR = ['RJ','SP','DF','MG','PR']
   belongs :dm_especialidades
-  validates :nome, :presence: true
-  validates :endereco, :presence: true
-  validates :bairro, :presence: true
-  validates :cep, :presence: true
-  validates :cidade, :presence: true
-  validates :estado, :presence: true, inclusion: { in: ESTADOS_BR }
-  validates :telefone, :presence: true
-  validates :inicio_atendimento, :presence: true
-  validates :terminio_atendimento, :presence: true
-  validates :ativo, :presence: true
+  validates :nome, :presence => true
+  validates :endereco, :presence => true
+  validates :bairro, :presence => true
+  validates :cep, :presence => true
+  validates :cidade, :presence => true
+  validates :estado, :presence => true, inclusion: { in: ESTADOS_BR }
+  validates :telefone, :presence => true
+  validates :inicio_atendimento, :presence => true
+  validates :terminio_atendimento, :presence => true
+  validates :ativo, :presence => true
     
   #:logotipo
   #t.decimal :latitude, :precision => 15, :scale => 13, :default => 0
