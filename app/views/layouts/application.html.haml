@@ -3,6 +3,8 @@
     %title= 'DoctorMaps'
     %meta{ charset: 'utf-8' }
 
+    %script{:type => "text/javascript", :src  => "//maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry"}
+    %script{:type => "text/javascript", :src  => "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js"}
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
     = yield :css
