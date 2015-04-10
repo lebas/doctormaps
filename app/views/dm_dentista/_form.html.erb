@@ -1,0 +1,73 @@
+<%= form_for(@dm_dentistum) do |f| %>
+  <% if @dm_dentistum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dm_dentistum.errors.count, "error") %> prohibited this dm_dentistum from being saved:</h2>
+
+      <ul>
+      <% @dm_dentistum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :especialidade %><br>
+    <%= f.text_field :especialidade %>
+  </div>
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :endereco %><br>
+    <%= f.text_area :endereco %>
+  </div>
+  <div class="field">
+    <%= f.label :bairro %><br>
+    <%= f.text_field :bairro %>
+  </div>
+  <div class="field">
+    <%= f.label :cep %><br>
+    <%= f.text_field :cep %>
+  </div>
+  <div class="field">
+    <%= f.label :cidade %><br>
+    <%= f.text_field :cidade %>
+  </div>
+  <div class="field">
+    <%= f.label :estado %><br>
+    <%= f.text_field :estado %>
+  </div>
+  <div class="field">
+    <%= f.label :cro %><br>
+    <%= f.text_field :cro %>
+  </div>
+  <div class="field">
+    <%= f.label :telefone %><br>
+    <%= f.text_field :telefone %>
+  </div>
+  <div class="field">
+    <%= f.label :logotipo %><br>
+    <%= f.text_field :logotipo %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :inicio_atendimento %><br>
+    <%= f.datetime_select :inicio_atendimento %>
+  </div>
+  <div class="field">
+    <%= f.label :terminio %><br>
+    <%= f.text_field :terminio %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

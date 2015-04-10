@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dm_dentista</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Especialidade</th>
+      <th>Nome</th>
+      <th>Endereco</th>
+      <th>Bairro</th>
+      <th>Cep</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>Cro</th>
+      <th>Telefone</th>
+      <th>Logotipo</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Inicio atendimento</th>
+      <th>Terminio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dm_dentista.each do |dm_dentistum| %>
+      <tr>
+        <td><%= dm_dentistum.especialidade %></td>
+        <td><%= dm_dentistum.nome %></td>
+        <td><%= dm_dentistum.endereco %></td>
+        <td><%= dm_dentistum.bairro %></td>
+        <td><%= dm_dentistum.cep %></td>
+        <td><%= dm_dentistum.cidade %></td>
+        <td><%= dm_dentistum.estado %></td>
+        <td><%= dm_dentistum.cro %></td>
+        <td><%= dm_dentistum.telefone %></td>
+        <td><%= dm_dentistum.logotipo %></td>
+        <td><%= dm_dentistum.latitude %></td>
+        <td><%= dm_dentistum.longitude %></td>
+        <td><%= dm_dentistum.inicio_atendimento %></td>
+        <td><%= dm_dentistum.terminio %></td>
+        <td><%= link_to 'Show', dm_dentistum %></td>
+        <td><%= link_to 'Edit', edit_dm_dentistum_path(dm_dentistum) %></td>
+        <td><%= link_to 'Destroy', dm_dentistum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dm dentistum', new_dm_dentistum_path %>

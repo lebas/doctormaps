@@ -1,0 +1,2 @@
+module DmEspecialidadesHelper
+end

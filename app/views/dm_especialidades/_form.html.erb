@@ -1,0 +1,21 @@
+<%= form_for(@dm_especialidade) do |f| %>
+  <% if @dm_especialidade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dm_especialidade.errors.count, "error") %> prohibited this dm_especialidade from being saved:</h2>
+
+      <ul>
+      <% @dm_especialidade.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :especialidade %><br>
+    <%= f.text_field :especialidade %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

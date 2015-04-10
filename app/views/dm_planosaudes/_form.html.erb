@@ -1,0 +1,25 @@
+<%= form_for(@dm_planosaude) do |f| %>
+  <% if @dm_planosaude.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dm_planosaude.errors.count, "error") %> prohibited this dm_planosaude from being saved:</h2>
+
+      <ul>
+      <% @dm_planosaude.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo %><br>
+    <%= f.text_field :tipo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

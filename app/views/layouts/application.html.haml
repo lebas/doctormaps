@@ -1,0 +1,15 @@
+%html{ lang: 'pt-br'}
+  %head
+    %title= 'DoctorMaps'
+    %meta{ charset: 'utf-8' }
+
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = yield :css
+
+    = csrf_meta_tags
+    %link{:href => image_path("favicon.ico"), :rel => "shortcut icon", :type => "image/vnd.microsoft.icon"}
+  %body
+    .notice= notice
+    .alert=  alert
+    =yield

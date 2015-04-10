@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dm_planosaudes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dm_planosaudes.each do |dm_planosaude| %>
+      <tr>
+        <td><%= dm_planosaude.nome %></td>
+        <td><%= dm_planosaude.tipo %></td>
+        <td><%= link_to 'Show', dm_planosaude %></td>
+        <td><%= link_to 'Edit', edit_dm_planosaude_path(dm_planosaude) %></td>
+        <td><%= link_to 'Destroy', dm_planosaude, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dm planosaude', new_dm_planosaude_path %>

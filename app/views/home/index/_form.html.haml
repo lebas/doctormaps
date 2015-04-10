@@ -1,0 +1,7 @@
+.form_search
+  = form_tag '/rotas' do
+    = field_set_tag do
+      = text_field_tag :objetos
+      = select_tag :select_espec, options_for_select([['A data','A'],['B data','B']])
+      = select_tag :select_plano, options_for_select([['A data','A'],['B data','B']])
+      = submit_tag 'Buscar'
