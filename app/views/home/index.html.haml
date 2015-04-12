@@ -4,6 +4,9 @@
 #map_content{}
   #geolocation{}
 
+#footer
+  =render 'home/index/footer'
+
 :javascript
   var handler = Gmaps.build('Google');
   handler.buildMap({ internal: {id: 'geolocation'} }, function(){

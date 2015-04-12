@@ -2,7 +2,7 @@
 .form_search
   = form_tag '/rotas' do
     = field_set_tag do
-      = text_field_tag :objetos
-      = select_tag :select_espec, options_for_select([['Especialidade','A'],['','B']])
-      = select_tag :select_plano, options_for_select([['Plano de Saúde','A'],['','B']])
+      = text_field_tag :objetos, '', placeholder: 'Nome do médico ou clínica'
+      = select_tag :select_espec, options_for_select(@especialidades.map { |c| [c.especialidade]})
+      = select_tag :select_plano, options_for_select(@planos.map {|c|[c.nome]})
       = submit_tag 'Buscar'

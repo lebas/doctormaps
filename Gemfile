@@ -67,4 +67,5 @@ gem 'activeadmin', github: 'activeadmin'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 gem 'gmaps4rails'
+gem 'geokit-rails'
 

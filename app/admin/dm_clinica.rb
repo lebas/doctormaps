@@ -14,7 +14,6 @@ ActiveAdmin.register DmClinica, namespace: :admin do
     column :inicio_atendimento
     column :terminio_atendimento
     column :ativo
-    default_actions
   end
 
   form do |f|
