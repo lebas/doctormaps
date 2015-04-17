@@ -1,7 +1,6 @@
 class CreateDmClinicas < ActiveRecord::Migration
   def change
     create_table :dm_clinicas do |t|
-      t.references :dm_especialidades
       t.string :nome, :null => false
       t.text :endereco, :null => false
       t.string :bairro, :null => false
@@ -15,6 +14,7 @@ class CreateDmClinicas < ActiveRecord::Migration
       t.datetime :inicio_atendimento, :null => false
       t.datetime :terminio_atendimento, :null => false
       t.boolean :ativo, :null => false, :default => false
+      t.integer  :requesicao, :default => 0, :null => false
       t.timestamps
     end
   end

@@ -1,0 +1,25 @@
+<%= form_for(@dm_clinica_especialidade) do |f| %>
+  <% if @dm_clinica_especialidade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dm_clinica_especialidade.errors.count, "error") %> prohibited this dm_clinica_especialidade from being saved:</h2>
+
+      <ul>
+      <% @dm_clinica_especialidade.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :clinica %><br>
+    <%= f.number_field :clinica %>
+  </div>
+  <div class="field">
+    <%= f.label :especialidade %><br>
+    <%= f.number_field :especialidade %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -16,6 +16,7 @@ class CreateDmMedicos < ActiveRecord::Migration
       t.datetime :inicio_atendimento, :null => false
       t.datetime :terminio_atendimento, :null => false
       t.boolean :ativo, :null => false, :default => false
+      t.integer  :requesicao, :default => 0, :null => false
       t.timestamps
     end
     add_index :dm_medicos, :crm, :unique => true

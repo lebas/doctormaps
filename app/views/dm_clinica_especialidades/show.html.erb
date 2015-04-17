@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Clinica:</strong>
+  <%= @dm_clinica_especialidade.clinica %>
+</p>
+
+<p>
+  <strong>Especialidade:</strong>
+  <%= @dm_clinica_especialidade.especialidade %>
+</p>
+
+<%= link_to 'Edit', edit_dm_clinica_especialidade_path(@dm_clinica_especialidade) %> |
+<%= link_to 'Back', dm_clinica_especialidades_path %>

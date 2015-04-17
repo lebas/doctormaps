@@ -2,6 +2,9 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  resources :dm_dentista_especialidades
+  resources :dm_medico_especialidades
+  resources :dm_clinica_especialidades
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get 'home/index'

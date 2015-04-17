@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dm_dentista_especialidades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dentista</th>
+      <th>Especialidade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dm_dentista_especialidades.each do |dm_dentista_especialidade| %>
+      <tr>
+        <td><%= dm_dentista_especialidade.dentista %></td>
+        <td><%= dm_dentista_especialidade.especialidade %></td>
+        <td><%= link_to 'Show', dm_dentista_especialidade %></td>
+        <td><%= link_to 'Edit', edit_dm_dentista_especialidade_path(dm_dentista_especialidade) %></td>
+        <td><%= link_to 'Destroy', dm_dentista_especialidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dm dentista especialidade', new_dm_dentista_especialidade_path %>

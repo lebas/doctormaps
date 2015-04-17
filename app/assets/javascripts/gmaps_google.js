@@ -13,7 +13,7 @@ function displayOnMap(position){
     { lat: 49, lng: 4, name: 'Foo', infowindow: "I'm Foo"},
     { lat: 51, lng: 3.5, name: 'Foo', infowindow: "I'm Foo"}
   ]);
-  //handler.bounds.extendWith(markers);
+  handler.bounds.extendWith(markers);
   handler.fitMapToBounds();
   handler.map.centerOn(marker);
 };

@@ -68,4 +68,5 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'sass-rails'
 gem 'gmaps4rails'
 gem 'geokit-rails'
+gem 'certified'
 

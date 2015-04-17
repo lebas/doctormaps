@@ -1,0 +1,2 @@
+module DmMedicoEspecialidadesHelper
+end

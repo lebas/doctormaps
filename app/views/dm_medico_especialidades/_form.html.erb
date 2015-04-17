@@ -1,0 +1,25 @@
+<%= form_for(@dm_medico_especialidade) do |f| %>
+  <% if @dm_medico_especialidade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dm_medico_especialidade.errors.count, "error") %> prohibited this dm_medico_especialidade from being saved:</h2>
+
+      <ul>
+      <% @dm_medico_especialidade.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :medico %><br>
+    <%= f.number_field :medico %>
+  </div>
+  <div class="field">
+    <%= f.label :especialidade %><br>
+    <%= f.number_field :especialidade %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

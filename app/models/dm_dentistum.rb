@@ -1,6 +1,6 @@
 class DmDentistum < ActiveRecord::Base
   ESTADOS_BR = ['RJ','SP','DF','MG','PR']
-  belongs_to :dm_especialidades
+  belongs_to :dm_dentista_especialidades
   validates :nome, :presence => true
   validates :endereco, :presence => true
   validates :bairro, :presence => true

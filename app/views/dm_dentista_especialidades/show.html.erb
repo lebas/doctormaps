@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dentista:</strong>
+  <%= @dm_dentista_especialidade.dentista %>
+</p>
+
+<p>
+  <strong>Especialidade:</strong>
+  <%= @dm_dentista_especialidade.especialidade %>
+</p>
+
+<%= link_to 'Edit', edit_dm_dentista_especialidade_path(@dm_dentista_especialidade) %> |
+<%= link_to 'Back', dm_dentista_especialidades_path %>

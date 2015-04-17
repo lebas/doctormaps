@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dm_medico_especialidades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Medico</th>
+      <th>Especialidade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dm_medico_especialidades.each do |dm_medico_especialidade| %>
+      <tr>
+        <td><%= dm_medico_especialidade.medico %></td>
+        <td><%= dm_medico_especialidade.especialidade %></td>
+        <td><%= link_to 'Show', dm_medico_especialidade %></td>
+        <td><%= link_to 'Edit', edit_dm_medico_especialidade_path(dm_medico_especialidade) %></td>
+        <td><%= link_to 'Destroy', dm_medico_especialidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dm medico especialidade', new_dm_medico_especialidade_path %>

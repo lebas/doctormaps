@@ -1,6 +1,6 @@
 class DmMedico < ActiveRecord::Base
   ESTADOS_BR = ['RJ','SP','DF','MG','PR']
-  belongs_to :dm_especialidades
+  belongs_to :dm_medico_especialidades
   validates :nome, :presence => true
   validates :endereco, :presence => true
   validates :bairro, :presence => true
@@ -31,4 +31,10 @@ class DmMedico < ActiveRecord::Base
       self.longitude = 1
     end
   end
+
+  def set_request
+    self.requisicao +=1 
+    self.save()
+  end
+
 end

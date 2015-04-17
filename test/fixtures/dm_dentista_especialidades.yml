@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dentista: 1
+  especialidade: 1
+
+two:
+  dentista: 1
+  especialidade: 1

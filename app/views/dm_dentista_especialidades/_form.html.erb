@@ -1,0 +1,25 @@
+<%= form_for(@dm_dentista_especialidade) do |f| %>
+  <% if @dm_dentista_especialidade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dm_dentista_especialidade.errors.count, "error") %> prohibited this dm_dentista_especialidade from being saved:</h2>
+
+      <ul>
+      <% @dm_dentista_especialidade.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :dentista %><br>
+    <%= f.number_field :dentista %>
+  </div>
+  <div class="field">
+    <%= f.label :especialidade %><br>
+    <%= f.number_field :especialidade %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

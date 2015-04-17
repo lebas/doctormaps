@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dm_clinica_especialidades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Clinica</th>
+      <th>Especialidade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dm_clinica_especialidades.each do |dm_clinica_especialidade| %>
+      <tr>
+        <td><%= dm_clinica_especialidade.clinica %></td>
+        <td><%= dm_clinica_especialidade.especialidade %></td>
+        <td><%= link_to 'Show', dm_clinica_especialidade %></td>
+        <td><%= link_to 'Edit', edit_dm_clinica_especialidade_path(dm_clinica_especialidade) %></td>
+        <td><%= link_to 'Destroy', dm_clinica_especialidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dm clinica especialidade', new_dm_clinica_especialidade_path %>
