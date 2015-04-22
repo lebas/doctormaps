@@ -24,5 +24,25 @@ Things you may want to cover:
 * ...
 
 
+README
+
+
+GERAL 
+
+* Agendamento via app
+
+
+MEDICO / CLINICA
+
+* Notificaçao de novo agendamento, aguardando aprovaçao 
+* Controle das consultas já agendadas
+
+
+PAGAMENTO VIA APPLEPAY / SAMSUNG PAY
+
+* Para consultas e procedimentos particulres
+
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+

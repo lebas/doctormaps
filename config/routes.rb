@@ -6,10 +6,14 @@ Rails.application.routes.draw do
   resources :dm_medico_especialidades
   resources :dm_clinica_especialidades
   devise_for :admin_users, ActiveAdmin::Devise.config
+  
   ActiveAdmin.routes(self)
   get 'home/index'
 
-  resources :dm_clinicas
+  resources :dm_clinicas do
+    get :autocomplete_nomes, :on => :collection
+  end
+
   resources :dm_planosaudes
   resources :dm_dentista
   resources :dm_medicos

@@ -1,5 +1,6 @@
 class DmClinicasController < ApplicationController
   before_action :set_dm_clinica, only: [:show, :edit, :update, :destroy]
+  autocomplete :nome, full: true
 
   # GET /dm_clinicas
   # GET /dm_clinicas.json

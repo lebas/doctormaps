@@ -13,6 +13,8 @@
 //= require_tree .
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
+//= require autocomplete-rails
 //= require gmaps/google
 //= require underscore-min
 //= require gmaps_google

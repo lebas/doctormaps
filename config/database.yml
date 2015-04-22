@@ -1,32 +1,32 @@
 default: &default
-  #adapter: mysql2
-  #encoding: utf8
-  #reconnect: false
-  #pool: 5
-  #username: root
-  #password: 
-  #socket: /tmp/mysql.sock
-  ############# HEROKU ###############
-  adapter: postgresql
-  encoding: unicode
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
   pool: 5
+  username: root
+  password: 
+  socket: /tmp/mysql.sock
+  ############# HEROKU ###############
+  #adapter: postgresql
+  #encoding: unicode
+  #pool: 5
 
 development:
   <<: *default
-  #database: doctormaps_development
+  database: doctormaps_development
   ############# HEROKU ###############
-  database: ruby-getting-started_development
+  #database: ruby-getting-started_development
 
 test:
   <<: *default
-  #database: doctormaps_test
+  database: doctormaps_test
   ############# HEROKU ###############
-  database: ruby-getting-started_test
+  #database: ruby-getting-started_test
 
 production:
   <<: *default
-  #database: doctormaps_development
+  database: doctormaps_development
   ############# HEROKU ###############
-  database: ruby-getting-started_production
-  username: ruby-getting-started
-  password: p6ii4648
+  #database: ruby-getting-started_production
+  #username: ruby-getting-started
+  #password: p6ii4648

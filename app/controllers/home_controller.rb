@@ -7,5 +7,9 @@ class HomeController < ApplicationController
     @cllocal = "["
     DmClinica.select(:nome, :latitude, :longitude).where('latitude <> 0').collect { |x| @cllocal << "{ lat: #{x.latitude}, lng: #{x.longitude}, title: '#{x.nome}', infowindow: '#{x.nome}'},"  }
     @cllocal << "]"
+    if !params[:objetos].nil?
+      obj = params[:objetos]
+      puts obj
+    end
   end
 end

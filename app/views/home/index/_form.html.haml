@@ -1,8 +1,8 @@
 %h1 DoctorMaps
 .form_search
-  = form_tag '/rotas' do
+  = form_tag '/' do
     = field_set_tag do
-      = text_field_tag :objetos, '', placeholder: 'Nome do médico ou clínica'
+      = text_field_tag :objetos, '', placeholder: 'Nome do médico ou clínica', :as => :autocomplete, :url=> autocomplete_nomes_dm_clinicas_path, :input_html => {'data-id-element' => '#dmclinica'}
       = select_tag :select_espec, options_for_select(@especialidades.map { |c| [c.especialidade]})
       = select_tag :select_plano, options_for_select(@planos.map {|c|[c.nome]})
       = submit_tag 'Buscar'

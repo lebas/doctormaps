@@ -49,6 +49,7 @@ gem 'web-console'
 # form
 #gem 'icheck-rails'
 #gem 'select2-rails'
+gem 'rails4-autocomplete'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150410002957) do
+ActiveRecord::Schema.define(version: 20150417043618) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -46,8 +46,14 @@ ActiveRecord::Schema.define(version: 20150410002957) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "dm_clinicas", force: :cascade do |t|
+  create_table "dm_clinica_especialidades", force: :cascade do |t|
+    t.integer  "dm_clinicas",          limit: 4
     t.integer  "dm_especialidades_id", limit: 4
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  create_table "dm_clinicas", force: :cascade do |t|
     t.string   "nome",                 limit: 255,                                             null: false
     t.text     "endereco",             limit: 65535,                                           null: false
     t.string   "bairro",               limit: 255,                                             null: false
@@ -63,10 +69,17 @@ ActiveRecord::Schema.define(version: 20150410002957) do
     t.boolean  "ativo",                limit: 1,                               default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "requisicao",           limit: 4,                               default: 0
+  end
+
+  create_table "dm_dentista_especialidades", force: :cascade do |t|
+    t.integer  "dm_dentistum_id",      limit: 4
+    t.integer  "dm_especialidades_id", limit: 4
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
   create_table "dm_dentistas", force: :cascade do |t|
-    t.integer  "dm_especialidades_id", limit: 4
     t.string   "nome",                 limit: 255,                                             null: false
     t.text     "endereco",             limit: 65535,                                           null: false
     t.string   "bairro",               limit: 255,                                             null: false
@@ -83,20 +96,28 @@ ActiveRecord::Schema.define(version: 20150410002957) do
     t.boolean  "ativo",                limit: 1,                               default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "requisicao",           limit: 4,                               default: 0
   end
 
   add_index "dm_dentistas", ["cro"], name: "index_dm_dentistas_on_cro", unique: true, using: :btree
 
   create_table "dm_especialidades", force: :cascade do |t|
-    t.string   "especialidade", limit: 255, null: false
+    t.string   "especialidade", limit: 255,             null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "requisicao",    limit: 4,   default: 0
   end
 
   add_index "dm_especialidades", ["especialidade"], name: "index_dm_especialidades_on_especialidade", unique: true, using: :btree
 
-  create_table "dm_medicos", force: :cascade do |t|
+  create_table "dm_medico_especialidades", force: :cascade do |t|
+    t.integer  "dm_medicos_id",        limit: 4
     t.integer  "dm_especialidades_id", limit: 4
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  create_table "dm_medicos", force: :cascade do |t|
     t.string   "nome",                 limit: 255,                                             null: false
     t.text     "endereco",             limit: 65535,                                           null: false
     t.string   "bairro",               limit: 255,                                             null: false
@@ -113,15 +134,17 @@ ActiveRecord::Schema.define(version: 20150410002957) do
     t.boolean  "ativo",                limit: 1,                               default: false, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "requisicao",           limit: 4,                               default: 0
   end
 
   add_index "dm_medicos", ["crm"], name: "index_dm_medicos_on_crm", unique: true, using: :btree
 
   create_table "dm_planosaudes", force: :cascade do |t|
-    t.string   "nome",       limit: 255, null: false
+    t.string   "nome",       limit: 255,             null: false
     t.string   "tipo",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "requisicao", limit: 4,   default: 0
   end
 
 end
