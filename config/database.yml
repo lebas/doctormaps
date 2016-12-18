@@ -29,4 +29,3 @@ production:
   ############# HEROKU ###############
   #database: ruby-getting-started_production
   #username: ruby-getting-started
-  #password: p6ii4648
